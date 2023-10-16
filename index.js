@@ -1,13 +1,28 @@
 let n = 5; // height of the pattern
 
-       //For loop
+//For loop
 let forPattern = "";
-       for (let i = 1; i <= n; i++) {
-           let row = "";
-           for (let j = 1; j<=i; j++){
-           row += j;
-       }
-       forPattern += row + "\n"
-       //console.log(row);
-    document.getElementById("forPattern").textContent = forPattern;
-    }
+for (let i = 1; i <= n; i++) {
+  let row = "";
+  for (let j = 1; j <= i; j++) {
+    row += j;
+  }
+  forPattern += row + "\n";
+  //console.log(row);
+  document.getElementById("forPattern").textContent = forPattern;
+}
+
+//While loop
+let whilePattern = "";
+let i = 1;
+while(i <= n){
+  let row = "";
+  let j = 1;
+  while (j <= i){
+      row += j;
+      j++
+  }
+  whilePattern += row + "\n";
+  i++;
+}
+document.getElementById("whilePattern").textContent = whilePattern;
