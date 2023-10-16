@@ -15,12 +15,12 @@ for (let i = 1; i <= n; i++) {
 //While loop
 let whilePattern = "";
 let i = 1;
-while(i <= n){
+while (i <= n) {
   let row = "";
   let j = 1;
-  while (j <= i){
-      row += j;
-      j++
+  while (j <= i) {
+    row += j;
+    j++;
   }
   whilePattern += row + "\n";
   i++;
@@ -29,16 +29,16 @@ document.getElementById("whilePattern").textContent = whilePattern;
 
 //do-while loop
 let doWhilePattern = "";
- i = 1;
-do{
-    let row = "";
-    let j = 1;
-    do{
-        row += j;
-        j++;
-    } while (j <= i);
-    doWhilePattern += row + "\n";
-    i++;
+i = 1;
+do {
+  let row = "";
+  let j = 1;
+  do {
+    row += j;
+    j++;
+  } while (j <= i);
+  doWhilePattern += row + "\n";
+  i++;
 } while (i <= n);
 document.getElementById("doWhilePattern").textContent = doWhilePattern;
 
@@ -54,3 +54,18 @@ for (let i = n; i >= 1; i--) {
   //console.log(row);
   document.getElementById("forPattern2").textContent = forPattern2;
 }
+
+//While loop
+let whilePattern2 = "";
+i = n;
+while (i >= 1) {
+  let row = "";
+  let j = 1;
+  while (j <= i) {
+    row += i;
+    j++;
+  }
+  whilePattern2 += row + "\n";
+  i--;
+}
+document.getElementById("whilePattern2").textContent = whilePattern2;
