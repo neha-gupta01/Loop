@@ -26,3 +26,18 @@ while(i <= n){
   i++;
 }
 document.getElementById("whilePattern").textContent = whilePattern;
+
+//do-while loop
+let doWhilePattern = "";
+ i = 1;
+do{
+    let row = "";
+    let j = 1;
+    do{
+        row += j;
+        j++;
+    } while (j <= i);
+    doWhilePattern += row + "\n";
+    i++;
+} while (i <= n);
+document.getElementById("doWhilePattern").textContent = doWhilePattern;
