@@ -130,7 +130,7 @@ do {
   do {
     row += " ";
     j++;
-  } while (j <= n - i);
+  } while (j <= n - i + 1);
   let k = 1;
   do {
     row += "*";
@@ -197,10 +197,8 @@ do {
     row += String.fromCharCode(charCode);
     charCode++;
     k++;
-  } while (k <= n -i + 1);
+  } while (k <= n - i + 1);
   doWhilePattern4 += row + "\n";
   i++;
 } while (i <= n);
 document.getElementById("doWhilePattern4").textContent = doWhilePattern4;
-
-
