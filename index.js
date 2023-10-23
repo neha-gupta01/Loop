@@ -144,39 +144,36 @@ document.getElementById("doWhilePattern3").textContent = doWhilePattern3;
 //Pattern 4
 //For loop
 let forPattern4 = "";
-let charCode = 65;
+let currentChar = "A";
 for (let i = 1; i <= n; i++) {
-  let row = "";
-  for (let j = 1; j < i; j++) {
-    row += " ";
+  for (let j = 1; j <= i; j++) {
+    forPattern4 += " ";
   }
   for (let k = 1; k <= n - i + 1; k++) {
-    row += String.fromCharCode(charCode);
-    charCode++;
+    forPattern4 += currentChar;
+    currentChar = String.fromCharCode(currentChar.charCodeAt(0) + 1);
   }
-  forPattern4 += row + "\n";
-  //console.log(row);
+  forPattern4 += "\n";
   document.getElementById("forPattern4").textContent = forPattern4;
 }
 
 //While loop
 let whilePattern4 = "";
 i = 1;
-charCode = 65;
+currentChar = "A";
 while (i <= n) {
-  let row = "";
   let j = 1;
-  while (j < i) {
-    row += " ";
+  while (j <= i) {
+    whilePattern4 += " ";
     j++;
   }
   let k = 1;
   while (k <= n - i + 1) {
-    row += String.fromCharCode(charCode);
-    charCode++;
+    whilePattern4 += currentChar;
+    currentChar = String.fromCharCode(currentChar.charCodeAt(0) + 1);
     k++;
   }
-  whilePattern4 += row + "\n";
+  whilePattern4 += "\n";
   i++;
 }
 document.getElementById("whilePattern4").textContent = whilePattern4;
@@ -184,21 +181,20 @@ document.getElementById("whilePattern4").textContent = whilePattern4;
 //do-while loop
 let doWhilePattern4 = "";
 i = 1;
-charCode = 65;
+currentChar = "A";
 do {
-  let row = "";
   let j = 1;
   do {
-    row += " ";
+    doWhilePattern4 += " ";
     j++;
   } while (j <= i);
   let k = 1;
   do {
-    row += String.fromCharCode(charCode);
-    charCode++;
+    doWhilePattern4 += currentChar;
+    currentChar = String.fromCharCode(currentChar.charCodeAt(0) + 1);
     k++;
   } while (k <= n - i + 1);
-  doWhilePattern4 += row + "\n";
+  doWhilePattern4 += "\n";
   i++;
 } while (i <= n);
 document.getElementById("doWhilePattern4").textContent = doWhilePattern4;
